@@ -19,10 +19,10 @@
     <label>Start Y: <input type="number" id="startY" value="400" min="0" max="800"></label>
     <label>End X: <input type="number" id="endX" value="750" min="0" max="800"></label>
     <label>End Y: <input type="number" id="endY" value="400" min="0" max="800"></label>
-    <label>Control X1: <input type="number" id="controlX" value="200"></label>
-    <label>Control Y1: <input type="number" id="controlY" value="750"></label>
-    <label>Control X2: <input type="number" id="controlX2" value="600"></label>
-    <label>Control Y2: <input type="number" id="controlY2" value="50"></label>
+    <label>Control X1: <input type="number" id="controlX" value="200" step="5" ></label>
+    <label>Control Y1: <input type="number" id="controlY" value="750" step="5"></label>
+    <label>Control X2: <input type="number" id="controlX2" value="600" step="5"></label>
+    <label>Control Y2: <input type="number" id="controlY2" value="50" step="5"S></label>
   </div>
 
   <input type="text" id="pathCode" value="" readonly width="800px"><br>
@@ -60,7 +60,7 @@
       <p>The curve will update dynamically as you change the values.</p>
       <p>The dotted faint lines show how the control points work to shape the curve.</p>
       <p>You can use the save button to put the data (d) parameter for the SVG path into the copy buffer.</p>
-      <p>Then you can can paste it into your application.</p>
+      <p>Then you can paste it into your application.</p>
     </div>
   </div>
 
