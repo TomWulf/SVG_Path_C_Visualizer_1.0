@@ -1,3 +1,6 @@
+*{
+  box-sizing: border-box;
+}
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -12,7 +15,7 @@ header {
 }
 
 .controls {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
@@ -22,7 +25,7 @@ label {
   display: flex;
   flex-direction: column;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 input {
@@ -33,13 +36,13 @@ input {
   display: block;
   font-family: monospace;
   font-weight: bold;
-  font-size: 1.5em;
-  width: 90%;
+  font-size: 1em;
+  width: 60%;
 }
 #copyButton, #helpButton {
-  margin-top: 10px;
-  padding: 10px 20px;
-  font-size: 16px;
+  margin-top: 5px;
+  padding: 10px 10px;
+  font-size: 1em;
   background-color: #007BFF;
   color: white;
   border: black 1px solid;
@@ -66,14 +69,14 @@ input {
   border: 1px solid #888;
   width: 50%;
   border-radius: 10px;
-  font-size: 18px;
+  font-size: 1em;
   font-family: Arial, sans-serif;
 }
 
 .close {
   color: #aaa;
   float: right;
-  font-size: 28px;
+  font-size: 1em;
   font-weight: bold;
   cursor: pointer;
 }
@@ -83,7 +86,7 @@ input {
   border: black 1px solid;
   border-radius: 5px;
   color: black;
-  font-size: 20px;
+  font-size: 1em;
   font-weight: bold;
   cursor: pointer;
 }
