@@ -46,44 +46,44 @@ function updateCurve() {
   pathCode.value = "d = '" + d + "'";
 
   // Update the positions of the points
-  startPoint.setAttribute("cx", startX);
-  startPoint.setAttribute("cy", startY);
-  controlPoint.setAttribute("cx", controlX);
-  controlPoint.setAttribute("cy", controlY);
-  controlPoint2.setAttribute("cx", controlX2);
-  controlPoint2.setAttribute("cy", controlY2);
-  endPoint.setAttribute("cx", endX);
-  endPoint.setAttribute("cy", endY);
+  startPoint.setAttribute("cx", startX.toString());
+  startPoint.setAttribute("cy", startY.toString());
+  controlPoint.setAttribute("cx", controlX.toString());
+  controlPoint.setAttribute("cy", controlY.toString());
+  controlPoint2.setAttribute("cx", controlX2.toString());
+  controlPoint2.setAttribute("cy", controlY2.toString());
+  endPoint.setAttribute("cx", endX.toString());
+  endPoint.setAttribute("cy", endY.toString());
 
-  baseLine.setAttribute("x1", startX);
-  baseLine.setAttribute("y1", startY);
-  baseLine.setAttribute("x2", endX);
-  baseLine.setAttribute("y2", endY);
-  controline1.setAttribute("x1", startX);
-  controline1.setAttribute("y1", startY);
-  controline1.setAttribute("x2", controlX);
-  controline1.setAttribute("y2", controlY);
+  baseLine.setAttribute("x1", startX.toString());
+  baseLine.setAttribute("y1", startY.toString());
+  baseLine.setAttribute("x2", endX.toString());
+  baseLine.setAttribute("y2", endY.toString());
+  controline1.setAttribute("x1", startX.toString());
+  controline1.setAttribute("y1", startY.toString());
+  controline1.setAttribute("x2", controlX.toString());
+  controline1.setAttribute("y2", controlY.toString());
 
-  controline2.setAttribute("x1", endX);
-  controline2.setAttribute("y1", endY);
-  controline2.setAttribute("x2", controlX2);
-  controline2.setAttribute("y2", controlY2);
+  controline2.setAttribute("x1", endX.toString());
+  controline2.setAttribute("y1", endY.toString());
+  controline2.setAttribute("x2", controlX2.toString());
+  controline2.setAttribute("y2", controlY2.toString());
 
-  controlJoin.setAttribute("x1", controlX);
-  controlJoin.setAttribute("y1", controlY);
-  controlJoin.setAttribute("x2", controlX2);
-  controlJoin.setAttribute("y2", controlY2);
+  controlJoin.setAttribute("x1", controlX.toString());
+  controlJoin.setAttribute("y1", controlY.toString());
+  controlJoin.setAttribute("x2", controlX2.toString());
+  controlJoin.setAttribute("y2", controlY2.toString());
 
   // Update the labels
   const offset = 10;
-  startLabel.setAttribute("x", inputs.startX.value - offset);
-  startLabel.setAttribute("y", inputs.startY.value - offset);
-  control1Label.setAttribute("x", inputs.controlX.value - offset);
-  control1Label.setAttribute("y", inputs.controlY.value - offset);
-  control2Label.setAttribute("x", inputs.controlX2.value - offset);
-  control2Label.setAttribute("y", inputs.controlY2.value - offset);
-  endLabel.setAttribute("x", inputs.endX.value - offset);
-  endLabel.setAttribute("y", inputs.endY.value - offset);
+  startLabel.setAttribute("x", (inputs.startX.value - offset).toString());
+  startLabel.setAttribute("y", (inputs.startY.value - offset).toString());
+  control1Label.setAttribute("x", (inputs.controlX.value - offset).toString());
+  control1Label.setAttribute("y", (inputs.controlY.value - offset).toString());
+  control2Label.setAttribute("x", (inputs.controlX2.value - offset).toString());
+  control2Label.setAttribute("y", (inputs.controlY2.value - offset).toString());
+  endLabel.setAttribute("x", (inputs.endX.value - offset).toString());
+  endLabel.setAttribute("y", (inputs.endY.value - offset).toString());
 
 }
 
