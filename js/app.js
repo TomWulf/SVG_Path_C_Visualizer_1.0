@@ -2,6 +2,7 @@ const svg = document.getElementById("svg");
 const curve = document.getElementById("curve");
 const startPoint = document.getElementById("startPoint");
 const controlPoint = document.getElementById("controlPoint");
+const controlPoint2 = document.getElementById("controlPoint2");
 const endPoint = document.getElementById("endPoint");
 const pathCode = document.getElementById("pathCode");
 const helpButton = document.getElementById("helpButton");
@@ -86,11 +87,6 @@ function updateCurve() {
 
 }
 
-const controlPoint2 = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-controlPoint2.setAttribute("id", "controlPoint2");
-controlPoint2.setAttribute("r", "5");
-controlPoint2.setAttribute("fill", "green");
-svg.appendChild(controlPoint2);
 
 copyButton.addEventListener("click", () => {
   const pathText = pathCode.value;
