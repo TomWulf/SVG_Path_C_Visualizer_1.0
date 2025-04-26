@@ -14,20 +14,33 @@
   <h1>SVG Path C Curve Visualizer v 1.0</h1>
 </header>
 <main>
-  <div class="controls">
+  <div class="controls" id="controls">
+    <div class="point">
     <label>Start X: <input type="number" id="startX" value="50" min="0" max="800"></label>
     <label>Start Y: <input type="number" id="startY" value="400" min="0" max="800"></label>
+    </div>
+    <div class="point">
     <label>End X: <input type="number" id="endX" value="750" min="0" max="800"></label>
     <label>End Y: <input type="number" id="endY" value="400" min="0" max="800"></label>
-    <label>Control X1: <input type="number" id="controlX" value="200" step="5" ></label>
+    </div>
+    <div class="point">
+        <label>Control X1: <input type="number" id="controlX" value="200" step="5" ></label>
     <label>Control Y1: <input type="number" id="controlY" value="750" step="5"></label>
-    <label>Control X2: <input type="number" id="controlX2" value="600" step="5"></label>
+    </div>
+    <div class="point">
+      <label>Control X2: <input type="number" id="controlX2" value="600" step="5"></label>
     <label>Control Y2: <input type="number" id="controlY2" value="50" step="5"S></label>
+    </div>
+    <div>
+      <span id="pathCode"></span><br>
+    </div>
+    <div>
+      <button id="copyButton">Copy Path to Clip Board</button>
+      <button id="helpButton">Help</button>
+    </div>
   </div>
-
-  <input type="text" id="pathCode" value="" readonly width="800px"><br>
-
-  <svg id="svg" width="50%" viewBox="0 0 800 800" style="border: 2px solid black;">
+<div id="SVGContainer">
+  <svg id="svg" width="800" height="800" style="border: 2px solid black;">
     <path id="curve" d="" stroke="blue" fill="none" stroke-width="2"></path>
     <circle id="startPoint" r="5" fill="red"></circle>
     <circle id="controlPoint" r="5" fill="green"></circle>
@@ -37,19 +50,14 @@
     <line id="controlLine1" stroke-dasharray="2,10" stroke="grey" stroke-width="2"></line>
     <line id="controlLine2" stroke-dasharray="2,10" stroke="grey" stroke-width="2"></line>
     <line id="controlJoin" stroke-dasharray="2,10" stroke="grey" stroke-width="2"></line>
-
     <!-- Labels -->
     <text id="startLabel" font-size="16" fill="black" >Start</text>
     <text id="control1Label" font-size="16" fill="black">Control 1</text>
     <text id="control2Label" font-size="16" fill="black">Control 2</text>
     <text id="endLabel" font-size="16" fill="black">End</text>
-
-
   </svg>
+</div>
 
-  <br>
-  <button id="copyButton">Copy Path to Clip Board</button>
-  <button id="helpButton">Help</button>
  `
   <div id="helpModal" class="modal">
     <div class="modal-content">
