@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SVG Path C Curve Visualizer v 1.0</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="js/css/style.css">
   <script defer src="js/app.js"></script>
 </head>
 
@@ -29,7 +29,7 @@
     </div>
     <div class="point">
       <label>Control2 X: <input type="number" id="controlX2" value="600" step="5"></label>
-    <label>Control2 Y: <input type="number" id="controlY2" value="50" step="5"S></label>
+    <label>Control2 Y: <input type="number" id="controlY2" value="50" step="5"></label>
     </div>
     <div>
       <span id="pathCode"></span><br>
@@ -42,10 +42,10 @@
 <div id="SVGContainer">
   <svg id="svg" width="800" height="800" style="border: 2px solid black;">
     <path id="curve" d="" stroke="blue" fill="none" stroke-width="2"></path>
-    <circle id="startPoint" r="5" fill="red"></circle>
-    <circle id="controlPoint" r="5" fill="green"></circle>
-    <circle id="controlPoint2" r="5" fill="green"></circle>
-    <circle id="endPoint" r="5" fill="red"></circle>
+    <circle id="startPoint" r="8" fill="red"></circle>
+    <circle id="controlPoint" r="8" fill="green"></circle>
+    <circle id="controlPoint2" r="8" fill="green"></circle>
+    <circle id="endPoint" r="8" fill="red"></circle>
     <line id="baseLine" stroke-dasharray="5,10" stroke="black" stroke-width="2"></line>
     <line id="controlLine1" stroke-dasharray="2,10" stroke="grey" stroke-width="2"></line>
     <line id="controlLine2" stroke-dasharray="2,10" stroke="grey" stroke-width="2"></line>
@@ -76,5 +76,5 @@
 </main>
 <footer>&copy; 2025 Tom Wulf <a href="mailto:Tom.Wulf@uc.edu?subject=SVG_Path_C_Visualizer_1.0">Mail: Tom.Wulf@uc.edu</a></footer>
 </body>
-<html>
+</html>
 

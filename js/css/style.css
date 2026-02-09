@@ -107,3 +107,20 @@ input {
 #controls {
   order: 2;
 }
+
+/* Make SVG points interactive */
+#startPoint, #endPoint, #controlPoint, #controlPoint2 {
+  cursor: grab;
+  transition: r 0.1s ease;
+}
+
+#startPoint:hover, #endPoint:hover, #controlPoint:hover, #controlPoint2:hover {
+  r: 8;
+  stroke: black;
+  stroke-width: 2;
+}
+
+#startPoint:active, #endPoint:active, #controlPoint:active, #controlPoint2:active {
+  cursor: grabbing;
+}
+

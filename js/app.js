@@ -119,5 +119,70 @@ window.addEventListener("click", (event) => {
   }
 });
 
+// Drag and Drop functionality
+let selectedPoint = null;
+let offset = { x: 0, y: 0 };
+
+// Make points draggable
+function makeDraggable(circle, inputX, inputY) {
+  circle.style.cursor = 'grab';
+
+  circle.addEventListener('mousedown', (e) => {
+    selectedPoint = { circle, inputX, inputY };
+    circle.style.cursor = 'grabbing';
+
+    // Get SVG coordinates
+    const svgRect = svg.getBoundingClientRect();
+    const svgX = e.clientX - svgRect.left;
+    const svgY = e.clientY - svgRect.top;
+
+    const cx = parseFloat(circle.getAttribute('cx'));
+    const cy = parseFloat(circle.getAttribute('cy'));
+
+    offset.x = svgX - cx;
+    offset.y = svgY - cy;
+
+    e.preventDefault();
+  });
+}
+
+// Handle mouse move on SVG
+svg.addEventListener('mousemove', (e) => {
+  if (!selectedPoint) return;
+
+  const svgRect = svg.getBoundingClientRect();
+  let svgX = e.clientX - svgRect.left - offset.x;
+  let svgY = e.clientY - svgRect.top - offset.y;
+
+  // Update input values
+  selectedPoint.inputX.value = Math.round(svgX);
+  selectedPoint.inputY.value = Math.round(svgY);
+
+  // Update the curve and points
+  updateCurve();
+});
+
+// Handle mouse up
+document.addEventListener('mouseup', () => {
+  if (selectedPoint) {
+    selectedPoint.circle.style.cursor = 'grab';
+    selectedPoint = null;
+  }
+});
+
+// Handle mouse leave from SVG
+svg.addEventListener('mouseleave', () => {
+  if (selectedPoint) {
+    selectedPoint.circle.style.cursor = 'grab';
+    selectedPoint = null;
+  }
+});
+
+// Setup draggable points
+makeDraggable(startPoint, inputs.startX, inputs.startY);
+makeDraggable(endPoint, inputs.endX, inputs.endY);
+makeDraggable(controlPoint, inputs.controlX, inputs.controlY);
+makeDraggable(controlPoint2, inputs.controlX2, inputs.controlY2);
+
 // Initialize the curve
 updateCurve();
